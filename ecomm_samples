@@ -1,0 +1,26 @@
+gantt
+    title eComm Samples Go Live
+    dateFormat  YYYY-MM-DD
+
+    todayMarker stroke-width:5px,stroke:#0f0,opacity:0.5
+
+    section Systems Setup
+    WES MD creaton   :a1, 2014-6-17, 2d
+    Hybris Setup     :after a1  , 3d
+    section W&D Setup
+    Procedures      :b1, 2014-06-17  , 4d
+    Bins setup in picking      :b2, after b1,  4d
+    section Products
+    samples identification  :c1, after b2, 2d
+    products setup on hybris  :c2, after c1, 1d
+    section test
+    enable function :d1, after c2, 1d
+    live test :d2, after d1, 1d
+    disable function : d3, after d2, 1d
+    validate results :d4, after d3, 1d
+    go/nogo :milestone, d5, after d4, 
+    
+    section golive
+    check picking area:e1, after d5, 1d
+    enable function :e2, after e1, 1d
+    hypercare period :e3, after e2, 3d
